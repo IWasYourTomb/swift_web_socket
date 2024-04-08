@@ -8,14 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var vm = HomeViewModel()
+    @FocusState private var messageFocus: Bool
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        VStack{
+            List(vm.message, id: \.self){ message in
+                Text(message)
+            }
+            HStack{
+                TextField("Message", text: $vm.messageText)
+                    .focused($messageFocus)
+                    
+                Button{
+                    vm.sendMessage()
+                    messageFocus = false
+                }label: {
+                    Text("Send")
+                }
+            }.padding(.all, 5)
         }
-        .padding()
+        .alert(item: $vm.alert){ alerts in
+                    Alert(title: alerts.title, message: alerts.message, dismissButton: alerts.dismissButton)
+                }
     }
 }
 

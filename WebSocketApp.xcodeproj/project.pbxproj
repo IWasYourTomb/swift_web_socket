@@ -11,6 +11,8 @@
 		B150D8CE2BC4852E007D035A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150D8CD2BC4852E007D035A /* ContentView.swift */; };
 		B150D8D02BC48530007D035A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B150D8CF2BC48530007D035A /* Assets.xcassets */; };
 		B150D8D32BC48530007D035A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B150D8D22BC48530007D035A /* Preview Assets.xcassets */; };
+		B150D8DB2BC4855A007D035A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150D8DA2BC4855A007D035A /* HomeViewModel.swift */; };
+		B150D8DE2BC48F74007D035A /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B150D8DD2BC48F74007D035A /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		B150D8CD2BC4852E007D035A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B150D8CF2BC48530007D035A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B150D8D22BC48530007D035A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B150D8DA2BC4855A007D035A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B150D8DD2BC48F74007D035A /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 		B150D8CA2BC4852E007D035A /* WebSocketApp */ = {
 			isa = PBXGroup;
 			children = (
+				B150D8DC2BC48F3F007D035A /* Helpers */,
+				B150D8D92BC48545007D035A /* ViewModel */,
 				B150D8CB2BC4852E007D035A /* WebSocketAppApp.swift */,
 				B150D8CD2BC4852E007D035A /* ContentView.swift */,
 				B150D8CF2BC48530007D035A /* Assets.xcassets */,
@@ -65,6 +71,22 @@
 				B150D8D22BC48530007D035A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B150D8D92BC48545007D035A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B150D8DA2BC4855A007D035A /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B150D8DC2BC48F3F007D035A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B150D8DD2BC48F74007D035A /* Alert.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +160,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B150D8CE2BC4852E007D035A /* ContentView.swift in Sources */,
+				B150D8DB2BC4855A007D035A /* HomeViewModel.swift in Sources */,
+				B150D8DE2BC48F74007D035A /* Alert.swift in Sources */,
 				B150D8CC2BC4852E007D035A /* WebSocketAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
