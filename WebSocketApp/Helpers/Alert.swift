@@ -20,5 +20,9 @@ struct AlertContext{
     static let invalidResponse = AlertItem(title: Text("Receive Messge Error"), message: Text("Invalid message from the server"), dismissButton: .default(Text("OK")))
     
     static let messageError = AlertItem(title: Text("Message Error"), message: Text("Error sending message to server"), dismissButton: .default(Text("OK")))
+    
+    static let emptyField = AlertItem(title: Text("Message Error"), message: Text("Filed message is empty"), dismissButton: .default(Text("OK")))
+    
+    static let invalidError = AlertItem(title: Text("Invalid Error"), message: Text("Invalid Error from server"), dismissButton: .default(Text("OK")))
 }
    

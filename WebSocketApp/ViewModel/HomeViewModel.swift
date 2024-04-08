@@ -46,13 +46,28 @@ class HomeViewModel: ObservableObject{
         }
     }
     
+    var isValidForm: Bool{
+        guard !messageText.isEmpty else {
+                alert = AlertContext.emptyField
+                return false
+            }
+            
+            return true
+        }
+    
     func sendMessage(){
-        guard messageText.data(using: .utf8) != nil else { return }
-               webSocketTask?.send(.string(messageText)) { error in
-                   if let error = error {
-                       self.alert = AlertContext.messageError
+        guard isValidForm else {return}
+        
+        do{
+            guard messageText.data(using: .utf8) != nil else { return }
+                   webSocketTask?.send(.string(messageText)) { error in
+                       if let error = error {
+                           self.alert = AlertContext.messageError
+                       }
                    }
-               }
-        messageText = ""
+            messageText = ""
+        }catch{
+            alert = AlertContext.invalidError
+        }
     }
 }
